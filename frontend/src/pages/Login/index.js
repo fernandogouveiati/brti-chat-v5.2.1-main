@@ -151,24 +151,25 @@ const Login = () => {
 						{i18n.t("Esqueci minha senha")}
 						</Link>
 					</Grid>*/}
-					<Grid item xs={12}>
-						<Link
-						href="#"
-						variant="body2"
-						component={RouterLink}
-						to="/signup"
-						>
-						{i18n.t("login.buttons.register")}
-						</Link>
-					</Grid>
-					</Grid>
+                {/*     <Grid item xs={12}>
+                        <Link
+                        href="#"
+                        variant="body2"
+                        component={RouterLink}
+                        to="/signup"
+                        >
+                        {i18n.t("login.buttons.register")}
+                        </Link>
+                    </Grid>*/}
+                    </Grid>
 
-				</form>
-			{/*	<IconButton color="primary"
-						onClick={() => openInNewTab(`https://wa.me/${process.env.REACT_APP_NUMBER_SUPPORT}`)}>
-						 <WhatsAppIcon style={{ color: "#25D366" }} />
-					</IconButton>
-			<Typography variant="caption" className={classes.supportText}><b>Fale com suporte</b></Typography>*/}
+                        </form>
+                        <IconButton color="primary"
+                                onClick={() => openInNewTab(`https://wa.me/${process.env.REACT_APP_NUMBER_SUPPORT}`)}>
+                                <WhatsAppIcon style={{ color: "#3e5f3a" }} />
+                        </IconButton>
+        {/*<Typography variant="caption" className={classes.supportText}><b>Fale com suporte</b></Typography>*/}
+
 			</div>
 		</Container>
 		</div>
@@ -176,7 +177,4 @@ const Login = () => {
 };
 
 export default Login;
-
-			
-			
 			
