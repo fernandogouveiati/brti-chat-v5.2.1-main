@@ -11,7 +11,8 @@ import ChatIcon from '@material-ui/icons/Chat';
 import TicketsManagerTabs from "../../components/TicketsManagerTabs/";
 import Ticket from "../../components/Ticket/";
 import TicketAdvancedLayout from "../../components/TicketAdvancedLayout";
-import logo from "../../assets/logo.png"; // LOGO//
+import logo from "../../assets/logo.png";
+import logobrti from "../../assets/brti.png";
 import { TicketsContext } from "../../context/Tickets/TicketsContext";
 
 import { i18n } from "../../translate/i18n";
@@ -62,11 +63,10 @@ const TicketAdvanced = (props) => {
 	const renderPlaceholder = () => {
 		return <Box className={classes.placeholderContainer}>
              {/*<div className={classes.placeholderItem}>{i18n.t("chat.noTicketMessage")}</div>*/}
-			// LOGO//
 			<div>
+			<center><img style={{ margin: "0 auto", width: "70%" }} src={logobrti} alt="logologin" /></center>
 			<center><img style={{ margin: "0 auto", width: "70%" }} src={logo} alt="logologin" /></center>
 			</div>
-			// LOGO//
 			<br />
             <Button onClick={() => setOption(1)} variant="contained" color="primary">
                 Selecionar Ticket

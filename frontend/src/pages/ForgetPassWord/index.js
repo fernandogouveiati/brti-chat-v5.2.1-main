@@ -20,7 +20,7 @@ import Container from "@material-ui/core/Container";
 import api from "../../services/api";
 import { i18n } from "../../translate/i18n";
 import moment from "moment";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/brti.png";
 import { toast } from 'react-toastify'; 
 import toastError from '../../errors/toastError';
 import 'react-toastify/dist/ReactToastify.css';
@@ -175,7 +175,7 @@ const handleSendEmail = async (values) => {
           <div>
             <img
               style={{ margin: "0 auto", height: "80px", width: "100%" }}
-              src={logo}
+	  	src={logo}
               alt="Whats"
             />
           </div>
@@ -331,7 +331,7 @@ const handleSendEmail = async (values) => {
                     Enviar Email
                   </Button>
                 )}
-                <Grid container justifyContent="flex-end">
+                 <Grid container justifyContent="flex-end">
                   <Grid item>
                     <Link
                       href="#"
@@ -339,10 +339,10 @@ const handleSendEmail = async (values) => {
                       component={RouterLink}
                       to="/signup"
                     >
-                      {i18n.t("Não tem uma conta? Cadastre-se!")}
+                      {i18n.t(" ")}
                     </Link>
                   </Grid>
-                </Grid>
+                </Grid> 
                 {error && (
                   <Typography variant="body2" color="error">
                     {error}

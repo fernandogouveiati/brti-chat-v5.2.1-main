@@ -17,7 +17,7 @@ import { i18n } from "../../translate/i18n";
 
 import { AuthContext } from "../../context/Auth/AuthContext";
 import logo from "../../assets/logo.png";
-
+import logobrti from "../../assets/brti.png";
 
 
 const Copyright = () => {
@@ -99,6 +99,7 @@ const Login = () => {
 			<CssBaseline/>
 			<div className={classes.paper}>
 				<div>
+					<center><img style={{ margin: "0 auto", width: "70%" }} src={logobrti} alt="Logologin" /></center>
 					<center><img style={{ margin: "0 auto", width: "70%" }} src={logo} alt="Logologin" /></center>
 				</div>
 				{/*<Typography component="h1" variant="h5">
@@ -151,25 +152,24 @@ const Login = () => {
 						{i18n.t("Esqueci minha senha")}
 						</Link>
 					</Grid>*/}
-                {/*     <Grid item xs={12}>
-                        <Link
-                        href="#"
-                        variant="body2"
-                        component={RouterLink}
-                        to="/signup"
-                        >
-                        {i18n.t("login.buttons.register")}
-                        </Link>
-                    </Grid>*/}
-                    </Grid>
+				{/*	<Grid item xs={12}>
+						<Link
+						href="#"
+						variant="body2"
+						component={RouterLink}
+						to="/signup"
+						>
+						{i18n.t("login.buttons.register")}
+						</Link>
+					</Grid>*/}
+					</Grid>
 
-                        </form>
-                        <IconButton color="primary"
-                                onClick={() => openInNewTab(`https://wa.me/${process.env.REACT_APP_NUMBER_SUPPORT}`)}>
-                                <WhatsAppIcon style={{ color: "#3e5f3a" }} />
-                        </IconButton>
-        {/*<Typography variant="caption" className={classes.supportText}><b>Fale com suporte</b></Typography>*/}
-
+				</form>
+				<IconButton color="primary"
+						onClick={() => openInNewTab(`https://wa.me/${process.env.REACT_APP_NUMBER_SUPPORT}`)}>
+						 <WhatsAppIcon style={{ color: "#3e5f3a" }} />
+					</IconButton>
+		{/*<Typography variant="caption" className={classes.supportText}><b>Entre em contato!</b></Typography>*/}
 			</div>
 		</Container>
 		</div>
@@ -177,4 +177,7 @@ const Login = () => {
 };
 
 export default Login;
+
+			
+			
 			

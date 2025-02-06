@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-                <title>Conectabot BRTI</title>
+                <title>ConectaPlus - BRTI</title>
                 <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -24,5 +24,45 @@
         <body>
                 <noscript>Você precisa habilitar o JavaScript para executar este aplicativo.</noscript>
                 <div id="root"></div>
+
+		<body style="background-color:#3e5f3a">
+		<!-- Botão de instalação que ficará oculto até o momento correto -->
+		<center><button id="install-button" style="display:none;">Instalar no Celular</button></center>
+		</body>		    
+
+		<!-- Scripts JS -->
+		<script>
+			 let deferredPrompt; // variável que vai armazenar o evento `beforeinstallprompt`
+
+		         // Ouve o evento 'beforeinstallprompt'
+		         window.addEventListener('beforeinstallprompt', (e) => {
+        	         // Impede o comportamento automático do navegador
+		         e.preventDefault();
+	                 // Armazena o evento para que possamos usá-lo depois
+        	         deferredPrompt = e;
+
+            		// Exibe o botão de instalação
+            		const installButton = document.getElementById('install-button');
+            		installButton.style.display = 'block'; // Torna o botão visível
+        		});
+
+        		// Quando o botão de instalação for clicado
+        		document.getElementById('install-button').addEventListener('click', (e) => {
+            		// Dispara a instalação quando o botão é clicado
+            		if (deferredPrompt) {
+                	deferredPrompt.prompt(); // Mostra a solicitação de instalação
+                	deferredPrompt.userChoice.then((choiceResult) => {
+                    		if (choiceResult.outcome === 'accepted') {
+                        		console.log('Usuário aceitou a instalação');
+                    		} else {
+                        		console.log('Usuário recusou a instalação');
+                    		}
+                    	deferredPrompt = null; // Reseta o evento após a escolha do usuário
+                	});
+            		}
+        		});
+		</script>
+
+
         </body>
 </html>

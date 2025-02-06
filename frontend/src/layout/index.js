@@ -389,11 +389,11 @@ const LoggedInLayout = ({ children, themeToggle }) => {
             {/* {greaterThenSm && user?.profile === "admin" && getDateAndDifDays(user?.company?.dueDate).difData < 7 ? ( */}
             {greaterThenSm && user?.profile === "admin" && user?.company?.dueDate ? (
               <>
-                Olá <b>{user.name}</b>, Bem vindo a <b>{user?.company?.name}</b>! (Ativo até {dateToClient(user?.company?.dueDate)})
+                Seja Bem Vindo(a) <b>{user.name}</b>, atendimento a <b>{user?.company?.name}</b>. (Validade: {dateToClient(user?.company?.dueDate)})
               </>
             ) : (
               <>
-                Olá  <b>{user.name}</b>, Bem vindo a <b>{user?.company?.name}</b>!
+                Seja Bem vindo(a) <b>{user.name}</b>, atendimento a <b>{user?.company?.name}</b>.
               </>
             )}
           </Typography>
@@ -428,7 +428,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
               aria-haspopup="true"
               onClick={handleMenu}
               variant="contained"
-              style={{ color: "white" }}
+              style={{ color: "#5f3a3e" }}
             >
               <AccountCircle />
             </IconButton>

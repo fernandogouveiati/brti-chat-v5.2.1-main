@@ -24,7 +24,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/brti.png";
 import { i18n } from "../../translate/i18n";
 
 import { openApi } from "../../services/api";
@@ -35,7 +35,7 @@ const Copyright = () => {
 		<Typography variant="body2" color="textSecondary" align="center">
 			{"Copyright © "}
 			<Link color="inherit" href="#">
-				Atendechat
+				ConectaBot
 			</Link>{" "}
 		   {new Date().getFullYear()}
 			{"."}
@@ -45,10 +45,13 @@ const Copyright = () => {
 
 const useStyles = makeStyles(theme => ({
 	paper: {
+		backgroundColor: "white",
 		marginTop: theme.spacing(8),
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
+		padding: "55px 30px",
+		borderRadius: "12.5px",
 	},
 	avatar: {
 		margin: theme.spacing(1),
